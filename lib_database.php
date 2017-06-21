@@ -6,7 +6,7 @@ class Database
     private $m_db = null;
 
     //=========================================================================
-    //  Obter uma instancia da base de dados
+    //  GET Database instance
     //=========================================================================
     static function getInstance( $name='default' )
     {
@@ -22,7 +22,7 @@ class Database
     }
 
     //=========================================================================
-    //  Constructor
+    //  Construct
     //=========================================================================
     function __construct( $name )
     {
@@ -36,7 +36,7 @@ class Database
 
 
     //=========================================================================
-    //  Executar query
+    //  Execute query
     //=========================================================================
     function executeQuery( $sql )
     {
@@ -48,7 +48,7 @@ class Database
     }
 
     //=========================================================================
-    //  Obter erro
+    //  Get error
     //=========================================================================
     function getError()
     {
@@ -58,7 +58,7 @@ class Database
     }
 
     //=========================================================================
-    //  Obter o número de registos
+    //  GET number of records
     //=========================================================================
     function getNumRows( $result )
     {
@@ -66,7 +66,7 @@ class Database
     }
 
     //=========================================================================
-    //  Obter dados da linha obtida
+    //  GET values of a row
     // return type can be = { MYSQLI_ASSOC, MYSQLI_NUM }
     //=========================================================================
     function fetchRow( $result , $return_type = MYSQLI_ASSOC )
@@ -78,7 +78,7 @@ class Database
     }
 
     //=========================================================================
-    //  Obter dados da linha obtida
+    //  GET values of a row
     //  OUTPUT : Numeric array
     //=========================================================================
     function fetchRowNum( $result )
@@ -88,7 +88,7 @@ class Database
     }
 
     //=========================================================================
-    //  Obter dados da linha obtida
+    //  GET values of a row
     //  OUTPUT : Associative array
     //=========================================================================
     function fetchRowAssoc( $result )
@@ -99,7 +99,7 @@ class Database
 
 
     //=========================================================================
-    //  Obter dados todos
+    // GET all data
     //=========================================================================
     function fetchArray( $result )
     {
@@ -110,7 +110,7 @@ class Database
     }
 
     //=========================================================================
-    //  Obter ID da última inserção
+    //  Get last ID
     //=========================================================================
     function getInsertId()
     {
