@@ -116,6 +116,24 @@ class Database
     {
         return mysqli_insert_id( $this->m_db );
     }
+	
+	function beginTransaction($flag= MYSQLI_TRANS_START_READ_ONLY){
+		mysqli_begin_transaction($this->m_db , $flag);
+	}
+	
+	//=========================================================================
+    //  Commit transction 
+    //=========================================================================
+	function commitTransaction(){
+		return mysqli_commit($this->m_db);
+	}
+
+    //=========================================================================
+    //  Commit transction
+    //=========================================================================
+    function rollbackdTransaction(){
+        return mysqli_rollback($this->m_db);
+    }
 };
 
 ?>
